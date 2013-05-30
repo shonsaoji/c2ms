@@ -4,7 +4,7 @@
 # http = Curl.get("http://localhost:3000/applications/5/configs?keys=EXPERIENCE")
 
 # configs = JSON.parse(http.body_str) 
-require  '/Applications/MAMP/htdocs/c2ms/config/environment.rb'
+require  './../../config/environment.rb'
 application = Application.find(5)
 
 configs = application.configs
