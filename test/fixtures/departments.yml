@@ -1,0 +1,39 @@
+Development:
+  id: 1
+  name: Software Development
+  business_unit_id: 1
+
+IT:
+  id: 2
+  name: Information Technology
+  business_unit_id: 1  
+
+Infrastructure:
+  id: 3
+  name: Infrastructure
+  business_unit_id: 1  
+
+Payments:
+  id: 4
+  name: Payments
+  business_unit_id: 2
+
+Investments:
+  id: 5
+  name: Investments
+  business_unit_id: 2
+
+Sales:
+  id: 6
+  name: Sales
+  business_unit_id: 3
+
+Marketing:
+  id: 7
+  name: Marketing
+  business_unit_id: 3
+
+Mergers:
+  id: 8
+  name: Mergers and Acquisitions 
+  business_unit_id: 3

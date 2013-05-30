@@ -1,0 +1,32 @@
+<h3>New Config</h3>
+
+<%#= render 'form' %>
+<div class='well-small'>
+<%= form_tag :controller => 'app_configs', :action => 'create' do %>
+	<%= hidden_field_tag 'application_id', @application.id %>
+	<div class='row'>
+		<div class='span1'>
+			Key
+		</div>
+		<div class='span'>
+			<%= text_field_tag 'key', nil, :placeholder => 'Key' %>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='span1'>
+			Value
+		</div>
+		<div class='span'>
+			<%= text_area_tag 'value', nil, :placeholder => 'Value' %>
+		</div>
+	</div>
+	
+	<input type='submit' value='Save' class='btn btn-large'/>
+	
+</div>
+	
+	
+<% end %>
+
+<%= link_to 'Back', application_path(@application) %>

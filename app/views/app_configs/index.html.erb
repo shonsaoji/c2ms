@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<div class='row'>
+  <div class='span'>
+    <h1>Configs for <span class='main-title'> <%= @application.name %> </span></h1>
+  </div>
+  
+  <% if @app_config %>
+  <div class='span'>
+    <h3>Revision <span class='main-title'> <%= @app_config.id %> </span></h3>
+  </div>
+  <% end %>
+  
+  <div class='span pull-right'>
+    <br><br>
+    <%= link_to 'Add New', new_application_app_config_path %>
+  </div>
+</div>
+
+
+
+<% if @app_config %>
+<table>
+  <tr>
+    <th>Config str</th>
+    <th>Application</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td><%= @app_config.config_str %></td>
+    <td><%= @app_config.application_id %></td>
+    <td><%= link_to 'Show', @app_config %></td>
+    <td><%= link_to 'Edit', edit_app_config_path(@app_config) %></td>
+    <td><%= link_to 'Destroy', @app_config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+</table>
+<% else %>
+
+  <div class='alert alert-error'> No Configs Defined </div>
+<% end %>
+
+<hr>
+

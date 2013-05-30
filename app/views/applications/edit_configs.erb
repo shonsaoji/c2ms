@@ -1,0 +1,31 @@
+<h3>Edit Config</h3>
+
+<div class='well-small'>
+<%= form_tag :controller => 'applications', :action => 'update_configs' do %>
+	<%= hidden_field_tag 'application_id', @application_id %>
+	<div class='row'>
+		<div class='span1'>
+			Key
+		</div>
+		<div class='span'>
+			<%= text_field_tag 'key', @key, :placeholder => 'Key' %>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='span1'>
+			Value
+		</div>
+		<div class='span'>
+			<%= text_area_tag 'value', @value, :placeholder => 'Value' %>
+		</div>
+	</div>
+	
+	<input type='submit' value='Save' class='btn btn-large'/>
+	
+</div>
+	
+	
+<% end %>
+
+<%= link_to 'Back', application_path(@application_id) %>

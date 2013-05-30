@@ -1,0 +1,11 @@
+Software:
+  id: 1
+  name: software
+
+Finance:
+  id: 2
+  name: finance
+
+Business:
+  id: 3
+  name: business

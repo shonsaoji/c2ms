@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Application Name : <%= @application.name %></h3>
+<hr>
+<div class='row'>
+
+	<div class='span'>
+		<p style='font-size: 20px'>Configs</p>
+	</div>
+	
+	<% if has_configs %>
+	<div class='span'>
+		<div class='badge badge-success'>Revision : <%= @application.revision %></div>
+	</div>
+	<% end %>
+
+	<div class='span pull-right'>
+		<%= link_to 'New configs', new_application_app_config_path(@application) %>
+	</div>
+</div>
+<% if has_configs %>
+<table class='table table-bordered'>
+	<tr>
+		<th>
+			Config Name
+		</th>
+		<th>
+			Value
+		</th>
+		<th></th>
+	</tr>
+	<% @application.configs.each do |config| %>
+	<tr>
+		<td><%= config['key'] %></td>
+		<td><%= config['value'] %></td>
+		<td><%= link_to 'Edit', :controller => 'applications', :action => 'edit_configs', :key => config['key'], :value => config['value'], :application_id => @application.id %></td>
+	</tr>
+	<% end %>
+</table>
+<% else %>
+<div class='alert alert-error'>
+	No Configs Defined
+</div>
+<% end %>
+<hr>
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

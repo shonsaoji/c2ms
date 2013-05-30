@@ -1,0 +1,34 @@
+CIBI:
+  id: 1
+  name: Cerebrate Integrated Business Intelligence
+  department_id: 1
+
+C2MS:
+  id: 2
+  name: Cerebrate Config Management System
+  department_id: 3
+
+Oracle:
+  id: 3
+  name: Oracle Finance
+  department_id: 2
+
+PaymentGateway:
+  id: 4
+  name: Axis Payment Gateways
+  department_id: 4
+
+Beagle:
+  id: 5
+  name: Infrastructure Management
+  department_id: 3
+
+Salesforce:
+  id: 6
+  name: SFDC
+  department_id: 6
+
+Mailchimp:
+  id: 7
+  name: MailChimp
+  department_id: 7
