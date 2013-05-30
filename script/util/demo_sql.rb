@@ -4,8 +4,9 @@
 # http = Curl.get("http://localhost:3000/applications/5/configs?keys=EXPERIENCE")
 
 # configs = JSON.parse(http.body_str) 
-require  './../../config/environment.rb'
-application = Application.find(5)
+require  File.expand_path File.dirname(__FILE__) + '/../../config/environment.rb'
+
+application = Application.find_by_name('DEMO')
 
 configs = application.configs
 
