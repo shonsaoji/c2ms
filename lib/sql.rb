@@ -7,6 +7,7 @@ class Sql
 
 	def execute (script)
 		env = Rails.env
+		Rails.logger.debug "-------- #{env} ---------"
 		f = "#{Rails.root}/script/util/#{script}"
 		out = `RAILS_ENV=#{env} ruby #{f} &`
 		out_lines = out.split("\n")
