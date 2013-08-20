@@ -25,7 +25,11 @@ end
 
 gem 'capistrano'
 gem 'jquery-rails'
-gem 'debugger'
+
+group :development do 
+	gem 'debugger'
+end
+
 gem 'curb'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
