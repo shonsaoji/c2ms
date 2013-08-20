@@ -10,7 +10,7 @@ development:
   password: sk4scrappers
   pool: 5
   timeout: 5000
-  socket: <%= ENV['MYSQL_SOCKET'] || '/var/mysqld/mysqld.sock' %>  
+  socket: <%= ENV['MYSQL_SOCKET'] || '/var/lib/mysql/mysql.sock' %>  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
