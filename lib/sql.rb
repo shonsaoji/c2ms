@@ -6,8 +6,9 @@ class Sql
 	end
 
 	def execute (script)
+		RAILS_ENV = Rails.env
 		f = "#{Rails.root}/script/util/#{script}"
-		out = `ruby #{f} &`
+		out = `RAILS_ENV=#{RAILS_ENV} ruby #{f} &`
 		out_lines = out.split("\n")
 		results = []
 		keys = []
