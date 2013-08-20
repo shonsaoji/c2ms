@@ -10,6 +10,7 @@ class Sql
 		f = "#{Rails.root}/script/util/#{script}"
 		out = `RAILS_ENV=#{env} ruby #{f} &`
 		out_lines = out.split("\n")
+		Rails.logger.debug out_lines
 		results = []
 		keys = []
 		count = 0
