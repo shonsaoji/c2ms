@@ -7,6 +7,7 @@ application = Application.find_by_name('DEMO')
 
 configs = application.configs
 
+dep = configs.select { |c| c['key'] == 'DEPARTMENT' }[0]['value']
 exp = configs.select { |c| c['key'] == 'EXPERIENCE' }[0]['value']
 
 query = "SELECT p.name as 'Product Name', 
@@ -16,7 +17,8 @@ b.name as 'Business Unit' FROM products p
 JOIN employees e ON p.department_id=e.department_id 
 JOIN departments d on e.department_id=d.id 
 JOIN business_units b ON d.business_unit_id=b.id
-WHERE e.experience >= #{exp};" 
+WHERE d.name = '#{dep}' AND
+e.experience >= #{exp}" 
 
 out = `mysql -uroot -psk4scrappers --socket=$MYSQL_SOCKET -D c2ms_development -e "#{query}"`
 
@@ -28,8 +30,3 @@ if out
 else
 	p "Script coult not execute successfully"
 end
-
-
-
-
-
