@@ -47,6 +47,9 @@ GEM
     coffee-script-source (1.6.2)
     columnize (0.3.6)
     curb (0.8.4)
+    curb-fu (0.6.2)
+      curb (>= 0.5.4.0)
+      rack-test (>= 0.2.0)
     debugger (1.5.0)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
@@ -133,6 +136,7 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
   curb
+  curb-fu
   debugger
   jquery-rails
   mysql

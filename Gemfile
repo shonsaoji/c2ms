@@ -10,6 +10,7 @@ gem 'mysql'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 
+gem 'curb-fu'
 
 # Gems used only for assets and not required
 # in production environments by default.
